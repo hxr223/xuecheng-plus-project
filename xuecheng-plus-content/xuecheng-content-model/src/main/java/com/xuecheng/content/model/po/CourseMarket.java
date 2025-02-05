@@ -1,0 +1,66 @@
+package com.xuecheng.content.model.po;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
+
+import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.ToString;
+import org.hibernate.validator.constraints.Length;
+
+/**
+* 课程营销信息
+* @TableName course_market
+*/
+@Data
+@TableName("course_market")
+public class CourseMarket implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 主键，课程id
+     */
+    private Long id;
+
+    /**
+     * 收费规则，对应数据字典
+     */
+    private String charge;
+
+    /**
+     * 现价
+     */
+    private Float price;
+
+    /**
+     * 原价
+     */
+    private Float originalPrice;
+
+    /**
+     * 咨询qq
+     */
+    private String qq;
+
+    /**
+     * 微信
+     */
+    private String wechat;
+
+    /**
+     * 电话
+     */
+    private String phone;
+
+    /**
+     * 有效期天数
+     */
+    private Integer validDays;
+
+
+}
