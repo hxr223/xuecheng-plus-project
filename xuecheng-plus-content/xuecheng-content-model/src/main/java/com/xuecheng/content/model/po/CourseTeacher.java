@@ -8,12 +8,16 @@ import java.io.Serializable;
 
 import java.util.Date;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 
 /**
 * 课程-教师关系表
 * @TableName course_teacher
 */
+@Data
+@ToString
 public class CourseTeacher implements Serializable {
 
     /**
@@ -61,103 +65,6 @@ public class CourseTeacher implements Serializable {
     @ApiModelProperty("创建时间")
     private Date createDate;
 
-    /**
-    * 主键
-    */
-    private void setId(Long id){
-    this.id = id;
-    }
 
-    /**
-    * 课程标识
-    */
-    private void setCourseId(Long courseId){
-    this.courseId = courseId;
-    }
-
-    /**
-    * 教师标识
-    */
-    private void setTeacherName(String teacherName){
-    this.teacherName = teacherName;
-    }
-
-    /**
-    * 教师职位
-    */
-    private void setPosition(String position){
-    this.position = position;
-    }
-
-    /**
-    * 教师简介
-    */
-    private void setIntroduction(String introduction){
-    this.introduction = introduction;
-    }
-
-    /**
-    * 照片
-    */
-    private void setPhotograph(String photograph){
-    this.photograph = photograph;
-    }
-
-    /**
-    * 创建时间
-    */
-    private void setCreateDate(Date createDate){
-    this.createDate = createDate;
-    }
-
-
-    /**
-    * 主键
-    */
-    private Long getId(){
-    return this.id;
-    }
-
-    /**
-    * 课程标识
-    */
-    private Long getCourseId(){
-    return this.courseId;
-    }
-
-    /**
-    * 教师标识
-    */
-    private String getTeacherName(){
-    return this.teacherName;
-    }
-
-    /**
-    * 教师职位
-    */
-    private String getPosition(){
-    return this.position;
-    }
-
-    /**
-    * 教师简介
-    */
-    private String getIntroduction(){
-    return this.introduction;
-    }
-
-    /**
-    * 照片
-    */
-    private String getPhotograph(){
-    return this.photograph;
-    }
-
-    /**
-    * 创建时间
-    */
-    private Date getCreateDate(){
-    return this.createDate;
-    }
 
 }
